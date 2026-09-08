@@ -4,6 +4,9 @@
 // 运行：node sorting/insertion-sort.js
 
 function insertionSort(arr) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError("insertionSort 需要传入数组");
+  }
   const a = arr.slice();
   for (let i = 1; i < a.length; i++) {
     const key = a[i];
@@ -17,7 +20,12 @@ function insertionSort(arr) {
   return a;
 }
 
-const demo = [5, 2, 8, 1, 9, 3];
-console.log("插入排序");
-console.log("原始数组:", demo);
-console.log("排序结果:", insertionSort(demo));
+module.exports = { insertionSort };
+
+// 直接运行本文件时执行演示
+if (require.main === module) {
+  const demo = [5, 2, 8, 1, 9, 3];
+  console.log("插入排序");
+  console.log("原始数组:", demo);
+  console.log("排序结果:", insertionSort(demo));
+}

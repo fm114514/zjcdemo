@@ -3,6 +3,9 @@
 // 运行：node sorting/bubble-sort.js
 
 function bubbleSort(arr) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError("bubbleSort 需要传入数组");
+  }
   const a = arr.slice();
   const n = a.length;
   for (let i = 0; i < n - 1; i++) {
@@ -19,7 +22,12 @@ function bubbleSort(arr) {
   return a;
 }
 
-const demo = [5, 2, 8, 1, 9, 3];
-console.log("冒泡排序");
-console.log("原始数组:", demo);
-console.log("排序结果:", bubbleSort(demo));
+module.exports = { bubbleSort };
+
+// 直接运行本文件时执行演示
+if (require.main === module) {
+  const demo = [5, 2, 8, 1, 9, 3];
+  console.log("冒泡排序");
+  console.log("原始数组:", demo);
+  console.log("排序结果:", bubbleSort(demo));
+}
