@@ -1,0 +1,131 @@
+/* 极简黑白风格 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffffff;
+  color: #111111;
+  font-family: Georgia, "Songti SC", "Noto Serif SC", serif;
+  line-height: 1.8;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 24px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 页头 */
+.site-header {
+  padding: 72px 0 40px;
+  border-bottom: 1px solid #111;
+  margin-bottom: 48px;
+}
+
+.site-title {
+  font-size: 32px;
+  font-weight: normal;
+  color: #111;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.site-tagline {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* 主体 */
+main {
+  flex: 1;
+}
+
+/* 文章列表 */
+.post-list {
+  list-style: none;
+}
+
+.post-item {
+  padding: 24px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.post-item:last-child {
+  border-bottom: none;
+}
+
+.post-link {
+  font-size: 22px;
+  color: #111;
+  text-decoration: none;
+  display: block;
+}
+
+.post-link:hover {
+  text-decoration: underline;
+}
+
+.post-date {
+  font-size: 13px;
+  color: #999;
+  margin-top: 6px;
+}
+
+.post-excerpt {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #555;
+}
+
+/* 文章详情 */
+.article-title {
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.article-date {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 32px;
+}
+
+.article-body p {
+  margin-bottom: 20px;
+  font-size: 17px;
+}
+
+.article-body h2 {
+  font-size: 22px;
+  font-weight: normal;
+  margin: 32px 0 12px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 48px;
+  font-size: 14px;
+  color: #111;
+  text-decoration: none;
+  border: 1px solid #111;
+  padding: 8px 16px;
+}
+
+.back-link:hover {
+  background: #111;
+  color: #fff;
+}
+
+/* 页脚 */
+.site-footer {
+  margin-top: 64px;
+  padding: 24px 0 40px;
+  border-top: 1px solid #e0e0e0;
+  font-size: 13px;
+  color: #999;
+}
